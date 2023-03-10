@@ -82,6 +82,7 @@ return packer.startup(function(use)
 
 	-- Telescope
 	use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
+  use { "xiyaowong/telescope-emoji.nvim", commit = "86248d97be84a1ce83f0541500ef9edc99ea2aa1" }
 
 	-- Treesitter
 	use {
@@ -91,10 +92,14 @@ return packer.startup(function(use)
 
 	-- Git
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
+  
+	-- Clipboard Image
+	use { "ekickx/clipboard-image.nvim", commit = "d1550dc26729b7954f95269952e90471b838fa25" }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
+
 end)
